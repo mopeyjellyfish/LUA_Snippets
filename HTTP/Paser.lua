@@ -6,7 +6,7 @@ local Params = http_parse(HTTP_BUFFER)
         if Params.ErrorCode == '0' then
           --successful
            g_PRINTLOG("SUCCESSFUL REQUEST");
-        elseif Params.responseCode == '5' then
+        elseif Params.ErrorCode == '5' then
           --do something with error
            g_PRINTLOG("PRINT ERROR");
         else
